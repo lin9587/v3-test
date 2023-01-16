@@ -1,9 +1,9 @@
 import type { RouteRecordRaw } from 'vue-router'
-import Index from '../lesson/chapter1/index'
+import Index from '../../views/threejs/chapter1'
 
 const chapter1: RouteRecordRaw[] = [
   {
-    path: '/',
+    path: '/threejs/',
     component: Index,
     meta: {
       title: '第一个场景',
