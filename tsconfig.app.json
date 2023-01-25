@@ -5,6 +5,8 @@
   "jsx": "preserve",
   "compilerOptions": {
     "composite": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

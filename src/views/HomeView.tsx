@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 
 export default defineComponent({
   setup() {
+    const cards: Array<string> = ['admin', 'h5', 'threejs']
     const router = useRouter()
 
     const toPages = (url: string) => {
@@ -12,21 +13,17 @@ export default defineComponent({
 
     return () => (
       <ElRow gutter={12} justify="center" style={{ paddingTop: '20%' }}>
-        <ElCol span={6}>
-          <div onClick={() => toPages('/admin/')}>
-            <ElCard shadow="hover">admin</ElCard>
-          </div>
-        </ElCol>
-        <ElCol span={6}>
-          <div onClick={() => toPages('/h5/')}>
-            <ElCard shadow="hover">h5</ElCard>
-          </div>
-        </ElCol>
-        <ElCol span={6}>
-          <ElCard shadow="hover">
-            <div onClick={() => toPages('/threejs/')}>threejs</div>
-          </ElCard>
-        </ElCol>
+        {() => {
+          return cards.map(routerPath => {
+            return (
+              <ElCol span={6} key={routerPath}>
+                <div onClick={() => toPages(`/${routerPath}/`)}>
+                  <ElCard shadow="hover">{routerPath}</ElCard>
+                </div>
+              </ElCol>
+            )
+          })
+        }}
       </ElRow>
     )
   },
