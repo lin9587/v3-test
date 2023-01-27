@@ -4,6 +4,7 @@ import Home from '../views/HomeView'
 
 import admin from './admin'
 import h5 from './h5'
+import learn from './learn'
 import threejs from './threejs'
 
 const routes: RouteRecordRaw[] = [
@@ -14,6 +15,7 @@ const routes: RouteRecordRaw[] = [
       title: 'home',
     },
   },
+  ...learn,
   ...admin,
   ...h5,
   ...threejs,
