@@ -4,6 +4,7 @@
   "exclude": ["src/**/__tests__/*"],
   "jsx": "preserve",
   "compilerOptions": {
+    "allowJs": true,
     "composite": true,
     "strictNullChecks": true,
     "noImplicitAny": true,

@@ -1,0 +1,79 @@
+<script>
+  // 源数据
+  let person = {
+    name: 'lin',
+    age: 18,
+  }
+
+  // 模拟vue2 响应式原理
+  // let p = {}
+  // Object.defineProperty(p, 'name', {
+  //   configurable: true,
+  //   get() {
+  //     // 有人读取name 时调用
+  //     return person.name
+  //   },
+  //   set(value) {
+  //     // 有人修改name 时调用
+  //     console.log('有人修改了name')
+  //     person.name = value
+  //   },
+  // })
+
+  // 模拟vue3 响应式原理
+  // window.Proxy 内置的构造函数
+  let p = new Proxy(person, {
+    // 有人读取p的某个属性值时调用
+    get(target, PropName) {
+      console.log('get', target, PropName)
+      // return target[PropName]
+      return Reflect.get(target, PropName)
+    },
+    // 有人修改p的某个属性、或给p追加某个属性时调用
+    set(target, PropName, value) {
+      console.log('set an add', target, PropName, value)
+      // target[PropName] = value
+      return Reflect.set(target, PropName, value)
+    },
+    // 有人删除p的某个属性时调用
+    deleteProperty(target, PropName) {
+      console.log('delete', target, PropName)
+      // return delete target[PropName]
+      return Reflect.deleteProperty(target, PropName)
+    },
+  })
+
+  let obj = { a: 1, b: 2 }
+  // 通过 Object.defineProperty 去操作
+  // try {
+  //   Object.defineProperty(obj, 'a', {
+  //     get() {
+  //       return 100
+  //     },
+  //   })
+  // Object.defineProperty(obj, 'a', {
+  //     get() {
+  //       return 200
+  //     },
+  //   })
+  // } catch (error) {
+  //   console.log(error)
+  // }
+
+  // 通过Reflect.defineProperty 去操作
+  // const x1 = Reflect.defineProperty(obj, 'a', {
+  //   get() {
+  //     return 3
+  //   },
+  // })
+  // const x2 = Reflect.defineProperty(obj, 'a', {
+  //   get() {
+  //     return 4
+  //   },
+  // })
+  // if (x1) {
+  //   // tdd
+  // } else {
+  //   // tdd
+  // }
+</script>

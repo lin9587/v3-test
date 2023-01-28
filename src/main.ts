@@ -17,7 +17,7 @@ import './style.css'
 
 // 创建应用实例对象——app(类似于之前Vue2中的vm，但app比vm更“轻”)
 const app = createApp(App)
-console.log('createApp', app)
+// console.log('createApp', app)
 
 app.use(createPinia())
 app.use(router)
