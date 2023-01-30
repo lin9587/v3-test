@@ -2,8 +2,8 @@
   <div>
     <h1>一个人的信息</h1>
     性: <input v-model="person.firstName" /> <br />
-    名: <input v-model="person.lastName" />
-    <p>全名：{{ fullName }}</p>
+    名: <input v-model="person.lastName" /> <br />
+    全名：<input v-model="fullName" />
   </div>
 </template>
 
@@ -23,8 +23,23 @@ export default {
       lastName: 'lin',
     })
 
-    const fullName = computed(() => {
-      return person.firstName + '-' + person.lastName
+    // 简写
+    // const fullName = computed(() => {
+    //   return person.firstName + '-' + person.lastName
+    // })
+
+    // 完整写
+    const fullName = computed({
+      get() {
+        return person.firstName + '-' + person.lastName
+      },
+      set(value) {
+        if (typeof value === 'string') {
+          const nameArr = value.split('-')
+          person.firstName = nameArr[0]
+          person.lastName = nameArr[1]
+        }
+      },
     })
 
     return {
@@ -34,3 +49,7 @@ export default {
   },
 }
 </script>
+
+function typeOf(value: string): any { throw new Error('Function not
+implemented.') } function typeOf(value: string): any { throw new Error('Function
+not implemented.') }

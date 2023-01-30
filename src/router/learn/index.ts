@@ -4,6 +4,8 @@ import Ref from '../../views/learn/02_src_ref函数/index.vue'
 import Reactive from '../../views/learn/03_src_reactive函数/index.vue'
 import SetupRq from '../../views/learn/05_src_setup两个注意点/index.vue'
 import Computed from '../../views/learn/06_src_computed/index.vue'
+import Watch from '../../views/learn/07_src_watch/index.vue'
+import WatchRefvsReactive from '../../views/learn/08_src_watchRefvsReactive/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -39,6 +41,20 @@ const routes: RouteRecordRaw[] = [
     component: Computed,
     meta: {
       title: 'computed',
+    },
+  },
+  {
+    path: '/watch/',
+    component: Watch,
+    meta: {
+      title: 'watch',
+    },
+  },
+  {
+    path: '/watchRefvsReactive/',
+    component: WatchRefvsReactive,
+    meta: {
+      title: 'watchRefvsReactive',
     },
   },
 ]
