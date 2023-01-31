@@ -6,6 +6,9 @@ import SetupRq from '../../views/learn/05_src_setup两个注意点/index.vue'
 import Computed from '../../views/learn/06_src_computed/index.vue'
 import Watch from '../../views/learn/07_src_watch/index.vue'
 import WatchRefvsReactive from '../../views/learn/08_src_watchRefvsReactive/index.vue'
+import WatchEffect from '../../views/learn/09_src_watchEffect/index.vue'
+import LifeCycle from '../../views/learn/10_src_lifecycle/index.vue'
+import HookFun from '../../views/learn/11_src_自定义hook函数/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -55,6 +58,27 @@ const routes: RouteRecordRaw[] = [
     component: WatchRefvsReactive,
     meta: {
       title: 'watchRefvsReactive',
+    },
+  },
+  {
+    path: '/watchEffect/',
+    component: WatchEffect,
+    meta: {
+      title: 'watchEffect',
+    },
+  },
+  {
+    path: '/lifecycle/',
+    component: LifeCycle,
+    meta: {
+      title: 'lifecycle',
+    },
+  },
+  {
+    path: '/hookFun/',
+    component: HookFun,
+    meta: {
+      title: 'hookFun',
     },
   },
 ]
