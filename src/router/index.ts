@@ -2,7 +2,6 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
 import Home from '../views/HomeView'
 
-import admin from './admin'
 import h5 from './h5'
 import learn from './learn'
 import threejs from './threejs'
@@ -16,7 +15,6 @@ const routes: RouteRecordRaw[] = [
     },
   },
   ...learn,
-  ...admin,
   ...h5,
   ...threejs,
 ]

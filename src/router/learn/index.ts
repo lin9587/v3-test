@@ -9,6 +9,8 @@ import WatchRefvsReactive from '../../views/learn/08_src_watchRefvsReactive/inde
 import WatchEffect from '../../views/learn/09_src_watchEffect/index.vue'
 import LifeCycle from '../../views/learn/10_src_lifecycle/index.vue'
 import HookFun from '../../views/learn/11_src_自定义hook函数/index.vue'
+import ToRef from '../../views/learn/12_src_toRef/index.vue'
+import ShallowRef from '../../views/learn/13_src_shallowRefandshallowReactive/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -79,6 +81,20 @@ const routes: RouteRecordRaw[] = [
     component: HookFun,
     meta: {
       title: 'hookFun',
+    },
+  },
+  {
+    path: '/toRef/',
+    component: ToRef,
+    meta: {
+      title: 'toRef',
+    },
+  },
+  {
+    path: '/shallowRef/',
+    component: ShallowRef,
+    meta: {
+      title: 'shallowRef',
     },
   },
 ]
