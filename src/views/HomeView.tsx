@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 
 export default defineComponent({
   setup() {
-    const cards: Array<string> = ['admin', 'h5', 'threejs']
+    const cards: Array<string> = ['h5', 'threejs']
     const router = useRouter()
 
     const toPages = (url: string) => {

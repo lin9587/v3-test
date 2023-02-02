@@ -11,6 +11,8 @@ import LifeCycle from '../../views/learn/10_src_lifecycle/index.vue'
 import HookFun from '../../views/learn/11_src_自定义hook函数/index.vue'
 import ToRef from '../../views/learn/12_src_toRef/index.vue'
 import ShallowRef from '../../views/learn/13_src_shallowRefandshallowReactive/index.vue'
+import Readonly from '../../views/learn/14_src_readonlyshallowReadonly/index.vue'
+import ToRawandmarkRaw from '../../views/learn/15_src_toRawandmarkRaw/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -95,6 +97,20 @@ const routes: RouteRecordRaw[] = [
     component: ShallowRef,
     meta: {
       title: 'shallowRef',
+    },
+  },
+  {
+    path: '/readonly/',
+    component: Readonly,
+    meta: {
+      title: 'readonly',
+    },
+  },
+  {
+    path: '/toRawandmarkRaw/',
+    component: ToRawandmarkRaw,
+    meta: {
+      title: 'toRawandmarkRaw',
     },
   },
 ]
