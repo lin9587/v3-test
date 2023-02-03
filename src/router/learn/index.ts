@@ -13,6 +13,7 @@ import ToRef from '../../views/learn/12_src_toRef/index.vue'
 import ShallowRef from '../../views/learn/13_src_shallowRefandshallowReactive/index.vue'
 import Readonly from '../../views/learn/14_src_readonlyshallowReadonly/index.vue'
 import ToRawandmarkRaw from '../../views/learn/15_src_toRawandmarkRaw/index.vue'
+import CustomRef from '../../views/learn/16_src_customRef/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -111,6 +112,13 @@ const routes: RouteRecordRaw[] = [
     component: ToRawandmarkRaw,
     meta: {
       title: 'toRawandmarkRaw',
+    },
+  },
+  {
+    path: '/customRef/',
+    component: CustomRef,
+    meta: {
+      title: 'customRef',
     },
   },
 ]
