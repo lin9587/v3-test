@@ -1,3 +1,4 @@
+import { provide } from 'vue'
 import type { RouteRecordRaw } from 'vue-router'
 import Setup from '../../views/learn/01_src_初识setup/index.vue'
 import Ref from '../../views/learn/02_src_ref函数/index.vue'
@@ -14,6 +15,7 @@ import ShallowRef from '../../views/learn/13_src_shallowRefandshallowReactive/in
 import Readonly from '../../views/learn/14_src_readonlyshallowReadonly/index.vue'
 import ToRawandmarkRaw from '../../views/learn/15_src_toRawandmarkRaw/index.vue'
 import CustomRef from '../../views/learn/16_src_customRef/index.vue'
+import Provide from '../../views/learn/17_src_provide和inject/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -119,6 +121,13 @@ const routes: RouteRecordRaw[] = [
     component: CustomRef,
     meta: {
       title: 'customRef',
+    },
+  },
+  {
+    path: '/provideandinject',
+    component: Provide,
+    meta: {
+      title: 'provideandinject',
     },
   },
 ]
