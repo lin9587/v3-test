@@ -10,7 +10,7 @@ export default {
 </script>
 <style scoped>
 .son {
-  background-color: gray;
+  background-color: pink;
   padding: 10px;
 }
 </style>
