@@ -16,6 +16,7 @@ import Readonly from '../../views/learn/14_src_readonlyshallowReadonly/index.vue
 import ToRawandmarkRaw from '../../views/learn/15_src_toRawandmarkRaw/index.vue'
 import CustomRef from '../../views/learn/16_src_customRef/index.vue'
 import Provide from '../../views/learn/17_src_provide和inject/index.vue'
+import ProxyTypeof from '../../views/learn/18_src_响应式数据的判断/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -128,6 +129,13 @@ const routes: RouteRecordRaw[] = [
     component: Provide,
     meta: {
       title: 'provideandinject',
+    },
+  },
+  {
+    path: '/proxyTypeof',
+    component: ProxyTypeof,
+    meta: {
+      title: 'proxyTypeof',
     },
   },
 ]
