@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import Son from './Son'
+import Son from './Son.vue'
 export default {
   name: 'Child',
   components: { Son },

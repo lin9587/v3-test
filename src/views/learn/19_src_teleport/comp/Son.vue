@@ -1,11 +1,12 @@
 <template>
   <div class="son">
-    <h3>我是Son组件（孙）, {{ car.name }}, {{ car.price }}</h3>
+    <h3>我是Son组件</h3>
+    <Dialog />
   </div>
 </template>
 <script>
 import { inject } from 'vue'
-import Dialog from 'Dialog'
+import Dialog from './Dialog.vue'
 
 export default {
   name: 'Son',
