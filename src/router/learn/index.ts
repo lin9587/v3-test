@@ -18,7 +18,7 @@ import CustomRef from '../../views/learn/16_src_customRef/index.vue'
 import Provide from '../../views/learn/17_src_provide和inject/index.vue'
 import ProxyTypeof from '../../views/learn/18_src_响应式数据的判断/index.vue'
 import Teleport from '../../views/learn/19_src_teleport/index.vue'
-import Suspense from '../../views/learn/19_src_suspense/index.vue'
+import Suspense from '../../views/learn/20_src_suspense/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
